@@ -23,5 +23,5 @@ function App() {
     </div>
   );
 }
-
+/* 가나다라 */
 export default App;
