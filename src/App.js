@@ -12,9 +12,11 @@ import UploadChicken from './uploadChicken.js'
 function App() {
 
   return (
+
     <div>
       <Header></Header>
       <UploadChicken></UploadChicken>
+
     </div>
     
   );
