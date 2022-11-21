@@ -1,7 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+
 import axios from 'axios';
 import React, {useState} from 'react';
+
+
+import Layout from './layout.js'
+import Header from './header.js'
+
+
 
 function App() {
   // axios.get('https://2c64-117-17-163-34.jp.ngrok.io/chicken/image/chicken.jpg')
@@ -69,7 +75,9 @@ function App() {
           <button id='submitBtn'>등록</button>
         </div>
       </body>
+        <Header></Header>
     </div>
+    
   );
 }
 
