@@ -1,13 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import React, {useState} from 'react';
 
 function App() {
+  // axios.get('https://2c64-117-17-163-34.jp.ngrok.io/chicken/image/chicken.jpg')
+  // .then(res => { 
+  //     setTestImage(res.data);
+  //     console.log(res.data);
+  //     console.log(testImage);
+  //   }
+  // )
+
+  axios.get('https://2c64-117-17-163-34.jp.ngrok.io/chicken/list?page=0')
+  .then(res => {
+    console.log(res.data)
+  })
+
+  // const [testImage, setTestImage] = useState();
+
   return (
     <div>
       <header className="App-header"><div id='topBar'></div></header>
       <body>
         <div id='divLeft'>
-          <img src='balloon.png' id='balloon'></img>
+          <img src={testImage} id='balloon'></img>
           <br></br>
           <img src='chicken.png' id='chicken'></img>
         </div>
