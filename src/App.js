@@ -1,21 +1,25 @@
 import './App.css';
 
+import axios from 'axios';
+import React, {useState} from 'react';
+
+
 import Layout from './layout.js'
 import Header from './header.js'
+import UploadChicken from './uploadChicken.js'
 
 
 function App() {
-  return (
-    <div className='app'>
-        <Header></Header>
-        <section>
-          <div className=''>
 
-          </div>
-        </section>
+  return (
+
+    <div>
+      <Header></Header>
+      <UploadChicken></UploadChicken>
+
     </div>
     
   );
 }
-/* 가나다라 */
+
 export default App;

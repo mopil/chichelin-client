@@ -1,0 +1,117 @@
+#topBar{
+    position: relative;
+    width: 100%;
+    height: 80px;
+  
+    background: #C19057;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+  }
+  body{
+    background: #FFF5E2;
+  }
+  #divLeft{
+    display: inline-block;
+  }
+  #balloon{
+    width: 300px;
+    margin-left: 470px;
+    margin-top: 30px;
+  }
+  #chicken{
+    width: 430px;
+    margin-left: 200px;
+    margin-top: -50px;
+  }
+  #divRight{
+    position: absolute;
+    height: 570px;
+    width: 754px;
+    margin-left: 120px;
+    margin-top: 150px;
+    display: inline-block;
+  }
+  #input1{
+    box-sizing: border-box;
+    font-size: 17px;
+    width: 170px;
+    height: 58px;
+    left: 557px;
+    top: 200px;
+    background: #FFFBEC;
+    border: 2px solid #000000;
+    margin-right: 30px;
+  }
+  #input2{
+    box-sizing: border-box;
+    font-size: 17px;
+    width: 170px;
+    height: 58px;
+    left: 557px;
+    top: 200px;
+    background: #FFFBEC;
+    border: 2px solid #000000;
+    margin-right: 30px;
+  }
+  #select1{
+    font-size: 17px;
+    box-sizing: border-box;
+  
+    width: 162px;
+    height: 58px;
+    left: 798px;
+    top: 200px;
+    background: #FFDE8A;
+    border: 2px solid #000000;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  #select2{
+    font-size: 17px;
+    box-sizing: border-box;
+  
+    width: 162px;
+    height: 58px;
+    left: 798px;
+    top: 200px;
+    background: #FFDE8A;
+    border: 2px solid #000000;
+    cursor: pointer;
+  }
+  
+  #callButton{
+    width: 750px;
+    height: 330px;
+    left: 555px;
+    top: 303px;
+    background: #FFFFFF;
+    border: 2px dashed #000000;
+  }
+  #callButton{
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+  }
+  #callFile {
+    visibility: hidden;
+  }
+  label img{
+    width: 200px;
+    display: block;
+    position: relative;
+    left: 37%;
+    top: 20%;
+  }
+  #submitBtn{
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    width:754px;
+    height: 59px;
+    left: 557px;
+    top: 636px;
+    background: rgba(255, 194, 108, 0.79);
+    border: 2px solid #000000;
+    border-radius: 30px;
+    cursor: pointer;
+  }
