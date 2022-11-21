@@ -1,5 +1,8 @@
 import './App.css';
+
+import Layout from './layout.js'
 import Header from './header.js'
+
 
 function App() {
   return (
@@ -14,5 +17,5 @@ function App() {
     
   );
 }
-
+/* 가나다라 */
 export default App;
