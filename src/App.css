@@ -1,13 +1,4 @@
-
 .App {
   text-align: center;
-  display: inline-block;
+  display: inline;
 }
-
-
-.app>section{
-  height: 100vh;
-  width: 100vw;
-  background-color: #fff5e2;
-}
-

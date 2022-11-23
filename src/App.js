@@ -1,7 +1,13 @@
 import './App.css';
 
-import axios from 'axios';
-import React from 'react';
+// import axios from 'axios';
+import React, {useState} from 'react';
+
+
+import Layout from './layout.js'
+import Header from './header.js'
+import UploadChicken from './uploadChicken.js'
+import MainPage from './mainPage';
 
 import Layout from './components/layout';
 import Header from './components/header';
@@ -10,10 +16,10 @@ import UploadChicken from './components/uploadChicken';
 function App() {
 
   return (
-    <>
-      <Header />
-      <UploadChicken />
-    </>
+    <div>
+      <MainPage></MainPage>
+      <UploadChicken></UploadChicken>
+    </div>
   );
 }
 

@@ -1,0 +1,52 @@
+.mainPage{
+    height:100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.mainPage>header{
+    height:80px;
+}
+.mainPage>body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFF5E2;
+    display: block;
+}
+#sortBy{
+    font-size: 17px;
+    float: right;
+    position: relative;
+    right:5%;
+    top: 2%;
+    width: 150px;
+    height: 40px;
+    background: rgb(235, 171, 41);
+    border: 2px solid #000000;
+    cursor: pointer;
+  }
+  #mainSlider{
+    display:inline-block;
+    height:400px;
+    width:80%;
+    margin:0;
+    padding:0;
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  #chickenBox1{
+    height:450px;
+    width: 400px;
+    background-color: rgb(225, 170, 70);
+  }
+  #chickenBox2{
+    height:450px;
+    width: 400px;
+    background-color: rgb(189, 56, 15);
+  }
+  
+  
