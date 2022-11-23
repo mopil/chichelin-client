@@ -1,0 +1,258 @@
+.detail{
+    box-sizing: border-box;
+    position: absolute;
+    width: 833px;
+    height: 394px;
+    left: 28%;
+    top: 150px;
+    background: #FFFBEC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  #rank{
+    position: absolute;
+    width: 59px;
+    height: 38px;
+    left: 20px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+  
+    color: #000000;
+    font-weight: bold;
+    background: #FFFBEC;
+  }
+  
+  #chickenName{
+    position:absolute;
+    width: 212px;
+    height: 53px;
+    left: 315px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  
+    color: #000000;
+    background: #FFFBEC;
+  }
+  
+  #brand{
+    position: absolute;
+    width: 150px;
+    height: 39px;
+    right: 130px;
+    top: 25%;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+  
+    display: flex;
+    align-items: center;
+  
+    color: #000000;
+    background: #FFFBEC;
+  }
+  
+  #price{
+    position: absolute;
+    width: 250px;
+    height: 42px;
+    left: 555px;
+    top: 38%;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+  
+    color: #000000;
+    background: #FFFBEC;
+  }
+  
+  #count{
+    position: absolute;
+    width: 124px;
+    height: 30px;
+    left: 600px;
+    top: 67%;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+  
+    color: #000000;
+    background: #FFFBEC;
+  }
+  
+  /* *{
+    position: relative;
+    background: #FFF5E2;
+  }
+  
+  hr{
+    top: 570px;
+  
+    border: 2px solid #FFDE8A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(-0.04deg);
+  } */
+  
+  #review{
+    position: absolute;
+    width: 212px;
+    height: 50px;
+    left: 20px;
+    top: 550px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  
+    color: #C19057;
+  }
+  
+  #review_register{
+    position: absolute;
+    width: 1157px;
+    height: 87px;
+    left: 18px;
+    top: 772px;
+    box-sizing: border-box;
+  
+    position: absolute;
+    width: 1710px;
+    height: 50px;
+    left: 18px;
+    top: 880px;
+  
+    background: #FFFBEC;
+    border: 2px solid #000000;
+  }
+  
+  #register{
+    position: absolute;
+    width: 107px;
+    height: 54px;
+    left: 1187px;
+    top: 808px;
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    left: 1750px;
+    top: 900px;
+    
+    background: rgba(255, 194, 108, 0.79);
+    border: 2px solid #000000;
+    border-radius: 30px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    
+    color: #000000;
+  }
+  
+  #date{
+  
+  }
+  
+  #nickName{
+   
+  }
+  
+  #content{
+    position: absolute;
+    width: 842px;
+    left: 18px;
+    top: 603px;
+  
+    background: #FFFBEC;
+    border-radius: 30px;
+    position: absolute;
+    
+    height: 40px;
+    left: 25px;
+    top: 650px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+  
+    color: #000000;
+  }
+  
+  #nickName{
+    position: absolute;
+    width: 161px;
+    height: 33px;
+    left: 18px;
+    top: 860px;
+  
+    background: #FFFBEC;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+  
+    color: #C1B6B6;
+  
+  }
+  
+  #passwd{
+    position: absolute;
+    width: 161px;
+    height: 33px;
+    left: 189px;
+    top: 860px;
+    
+    background: #FFFBEC;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+  
+    color: #C1B6B6;
+  
+  }

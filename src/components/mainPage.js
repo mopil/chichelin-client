@@ -1,9 +1,9 @@
-import './mainPage.css'
+import '../styles/mainPage.css'
 
 import React, {useState} from 'react';
 import Header from './header.js'
-import SimpleSlider from './slider';
-import StyledSlider from './slider';
+import SimpleSlider from '../slider';
+import StyledSlider from '../slider';
 
 function MainPage() {
 

@@ -1,24 +1,20 @@
-import './App.css';
 
-// import axios from 'axios';
 import React, {useState} from 'react';
-
-
-import Layout from './layout.js'
-import Header from './header.js'
-import UploadChicken from './uploadChicken.js'
-import MainPage from './mainPage';
-
+import './App.css';
+import MainPage from './components/mainPage';
 import Layout from './components/layout';
 import Header from './components/header';
 import UploadChicken from './components/uploadChicken';
+import Detailed from './components/detailed';
 
 function App() {
 
   return (
     <div>
       <MainPage></MainPage>
-      <UploadChicken></UploadChicken>
+      {/* <UploadChicken></UploadChicken> */}
+      {/* <Detailed></Detailed> */}
+      
     </div>
   );
 }
