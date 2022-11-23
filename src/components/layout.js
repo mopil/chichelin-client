@@ -1,11 +1,11 @@
 import React from 'react'
-import './layout.css'
+import '../styles/layout.css';
 
-function Layout (){
+function Layout() {
 
     return (
         <div className='layout'>
-            
+
         </div>
     )
 }
