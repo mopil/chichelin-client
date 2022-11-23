@@ -9,13 +9,16 @@ import Header from './header.js'
 import UploadChicken from './uploadChicken.js'
 import MainPage from './mainPage';
 
+import Layout from './components/layout';
+import Header from './components/header';
+import UploadChicken from './components/uploadChicken';
 
 function App() {
 
   return (
     <div>
       <MainPage></MainPage>
-      {/* <UploadChicken></UploadChicken> */}
+      <UploadChicken></UploadChicken>
     </div>
   );
 }
