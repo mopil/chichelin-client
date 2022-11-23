@@ -1,6 +1,6 @@
 import './uploadChicken.css'
 
-import axios from 'axios';
+// import axios from 'axios';
 import React, {useState} from 'react';
 
 
