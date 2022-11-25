@@ -1,13 +1,15 @@
 // import logo from './logo.svg';
 import '../styles/detailed.css';
+import React from 'react'
+import Header from './header.js';
 import '../App.css';
 
 function Detailed() {
   return (
-    <div className='App'>
-      <header className='App-header'>
+    <div>
+      <header><Header></Header>
       </header>
-      <body>
+      <body id="body">
         <div className='detail'>
           <p id='rank'>3위</p>
           <p id='chickenName'>"고추바사삭"</p>
@@ -18,8 +20,8 @@ function Detailed() {
           <img src=''></img>
           <img src=''></img>
           <p id='count'>1025</p>
-        </div>
-        <hr></hr>
+        </div><br></br>
+        <hr id="hr"></hr>
         <p id='review'>Reviews</p>
         <div id='content'>
         <p>심은지: 굿 맛 매콤해서 스트레스 받을 때 먹으면 스트레스가 쏴악~~~</p>

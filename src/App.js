@@ -11,9 +11,9 @@ function App() {
 
   return (
     <div>
-      <MainPage></MainPage>
+      {/* <MainPage></MainPage> */}
       {/* <UploadChicken></UploadChicken> */}
-      {/* <Detailed></Detailed> */}
+      <Detailed></Detailed>
       
     </div>
   );
