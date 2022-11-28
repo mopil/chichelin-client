@@ -46,7 +46,6 @@ function UploadChicken() {
 
   return (
     <div>
-      <header className="App-header"><div id='topBar'></div></header>
       <body>
         <div id='divLeft'>
           <img src='/images/balloon.png' id='balloon' alt='balloon'></img>
