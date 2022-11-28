@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
-import Header from './header';
 import '../styles/search.css';
-import SimpleSlider from '../searchSlider';
 import StyledSlider from '../searchSlider';
 
 function Search() {
@@ -12,7 +10,6 @@ function Search() {
                     <StyledSlider></StyledSlider>
                 </div>
             </body>
-            <Header></Header>
         </div>
     )
 }

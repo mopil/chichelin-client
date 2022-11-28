@@ -13,7 +13,6 @@ export default class SimpleSlider extends Component {
       speed: 800,
       slidesToShow: 1,
       slidesToScroll: 1,
-      dots: true,
       arrows: true,
       
     };

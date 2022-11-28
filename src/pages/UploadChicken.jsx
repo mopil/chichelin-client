@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/uploadChicken.css'
 import axios from 'axios';
-import Layout from './layout.js';
-import Header from './header.js';
 
 function UploadChicken() {
   const [chickenData, setChickenData] = useState(initialChickenData);
@@ -94,7 +92,6 @@ function UploadChicken() {
           <button id='submitBtn' onClick={postChicken}>등록</button>
         </div>
       </body>
-      <Header></Header>
     </div>
 
   );

@@ -1,5 +1,5 @@
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     height: 80px;
     width: 100%;
@@ -38,6 +38,7 @@
     position: absolute;
     display: flex;
     align-items: center;
+    top: 0;
     right: 0;
     height: 100%;
     padding-right: 10px;
@@ -51,7 +52,6 @@
 }
 
 .images {
-    float: right;
     height: 100%;
     padding-right: 3rem;
 }

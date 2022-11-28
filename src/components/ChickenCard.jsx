@@ -3,10 +3,10 @@ import baseUrl from "../api/api";
 import {BsFillSuitHeartFill} from "react-icons/bs";
 
 function ChickenCard(props) {
-  const {name, imageServerFilename, price, spicy, brand, likes} = props.chicken;
+  const {id, name, imageServerFilename, price, spicy, brand, likes} = props.chicken;
 
   return (
-    <main className='cardContainer'>
+    <main className='cardContainer' onClick={() => props.onClick(id)}>
       <img className='cardImg' src={`${baseUrl}/chicken/image/${imageServerFilename}`} alt='치킨사진'/>
 
       <section className='chickenInfo'>

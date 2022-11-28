@@ -1,14 +1,10 @@
-// import logo from './logo.svg';
 import '../styles/detailed.css';
 import React from 'react'
-import Header from './header.js';
 import '../App.css';
 
 function Detailed() {
   return (
     <div>
-      <header><Header></Header>
-      </header>
       <body id="body">
         <div className='detail'>
           <p id='rank'>3위</p>
@@ -26,7 +22,7 @@ function Detailed() {
         <p>심은지: 굿 맛 매콤해서 스트레스 받을 때 먹으면 스트레스가 쏴악~~~</p>
         <p id='date'>2022-11-12 12:33:44</p>
         </div>
-        <form action='#'>
+        <form action='src/pages/detailed#'>
         <label>닉네임(2-6 글자): </label>
         <input type='text' value='닉네임' id='nickName' required></input>
         <label>비밀번호(4 글자): </label>
