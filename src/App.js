@@ -1,24 +1,29 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import MainPage from './components/mainPage';
-import Layout from './components/layout';
-import Header from './components/header';
-import UploadChicken from './components/uploadChicken';
-import Detailed from './components/detailed';
-import Search from './components/search';
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import MainPage from './pages/mainPage';
+import UploadChicken from './pages/uploadChicken';
+import Detailed from './pages/detailed';
+import Search from './pages/search';
+import NotFound from "./pages/notFound";
+import Root from "./pages/root";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root/>,
+    errorElement: <NotFound/>,
+    children: [
+      {index: true, element: <MainPage/>},
+      {path: '/search', element: <Search/>},
+      {path: '/detail', element: <Detailed/>},
+      {path: '/upload', element: <UploadChicken/>}
+    ]
+  }
+]);
 
 function App() {
-
-  return (
-    <div>
-      {/* <MainPage></MainPage> */}
-      {/* <UploadChicken></UploadChicken> */}
-      <Detailed></Detailed>
-      {/* <Detailed></Detailed> */}
-      <Search></Search>
-
-    </div>
-  );
+  return <RouterProvider router={router}/>;
 }
 
 export default App;
