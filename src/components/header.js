@@ -10,7 +10,7 @@ function Header() {
             </nav>
             <div>
                 <img src='/images/ChickenMan.png' width='80' height='80' alt='음...'></img>
-                <img src='/images/speechBubble.png' width='80' height='80' alt='음...'></img>
+                <img src="/images/speechBubble.png" width='80' height='80' alt="엄"></img>
             </div>
         </header>
     )

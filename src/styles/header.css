@@ -20,12 +20,14 @@
     height: 40px;
     position:relative;
     left: 15%;
+    outline:none;
 }
 .header>nav>input{
     width: 75%;
     height: 100%;
     line-height: 100%;
     font-size: 1em;
+    
     outline: none;
     border: 1px solid;
     border-width: 2px;
@@ -55,7 +57,14 @@
 .header>div{
     display: inline;
     float: right;
+    padding:0;
+    height:100%;
 }
-.header>img{
+#uploadChickenLink{
     float:right;
+    border: none;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    padding:0;
 }
