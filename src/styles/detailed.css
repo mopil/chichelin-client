@@ -8,110 +8,148 @@ body{
     margin-top: 100px;
     background: #FFFBEC;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-  #rank{
-    margin-left: 15px;
-    padding-top: 10px;
-    font-family: 'Inter';
-    font-size: 32px;
-    color: #000000;
-    font-weight: bold;
-    background: #FFFBEC;
-  }
-  
-  #chickenName{  
-    margin-left: 40%;
-    font-family: 'Inter';
-    font-size: 36px;
-    color: #000000;
-    background: #FFFBEC;
-  }
-  
-  #brand{
-    font-family: 'Inter';
-    font-size: 32px;
-    line-height: 39px;
-    /* identical to box height */
-  
-    color: #000000;
-    background: #FFFBEC;
-  }
-  
-  #price{
-    font-family: 'Inter';
-    font-size: 32px;
-    color: #000000;
-    background: #FFFBEC;
-  }
-  
-  #count{
-    font-family: 'Inter';
-    font-size: 14px;
-    color: #000000;
-    background: #FFFBEC;
-  }
-  
-  #hr{
-    border: 2px solid #FFDE8A;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transform: rotate(-0.04deg);
-  }
-  
-  #review{
-    font-family: 'Inter';
-    font-size: 38px;
-    margin-top: 0%;
-    margin-left: 10px;
-    color: #C19057;
-  } 
-  
-  #review_register{
-    box-sizing: border-box;
-    background: #FFFBEC;
-    border: 2px solid #000000;
-  }
-  
-  #register{    
-    width: 100px;
-    height: 50px;
-    background: rgba(255, 194, 108, 0.79);
-    border: 2px solid #000000;
-    border-radius: 30px;
-    font-family: 'Inter';
-    font-size: 18px;
-    color: #000000;
-  }
-  
-  #date{
-  
-  }
-  
-  #nickName{
-   
-  }
-  
-  #content{
-    background: #FFFBEC;
-    border-radius: 30px;
-    font-family: 'Inter';
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-  }
-  
-  #nickName{
-    width: ;
-    background: #FFFBEC;
-    font-family: 'Inter';
-    font-size: 15px;
-    color: #C1B6B6;
-  }
-  
-  #passwd{
-    background: #FFFBEC;
-    font-family: 'Inter';
-    font-size: 15px;
-    color: #C1B6B6;
-  }
+}
+
+#rank{
+  margin-left: 15px;
+  padding-top: 10px;
+  font-family: 'Inter';
+  font-size: 32px;
+  color: #000000;
+  font-weight: bold;
+  background: #FFFBEC;
+}
+
+#chickenName{  
+  margin-left: 40%;
+  margin-top: -40px;
+  font-family: 'Inter';
+  font-size: 36px;
+  color: #000000;
+  background: #FFFBEC;
+}
+
+#brand{
+  margin-top: -400px;
+  margin-left: 600px;
+  font-family: 'Inter';
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  color: #000000;
+  background: #FFFBEC;
+}
+
+#price{
+  margin-top: -20px;
+  margin-left: 600px;
+  padding-bottom: 0%;
+  font-family: 'Inter';
+  font-size: 32px;
+  color: #000000;
+  background: #FFFBEC;
+}
+
+#count{
+  margin-left: 650px;
+  margin-top: -32px;
+  font-family: 'Inter';
+  font-size: 16px;
+  color: #000000;
+  background: #FFFBEC;
+}
+
+#spicyBasasack{
+  width: 550px;
+  height: 520px; 
+  margin-left: 30px;
+  margin-top: -115px;
+}
+#spicy{
+  width: 32px;
+  height: 35px;
+  margin-left: 600px;
+  margin-top: -300px;
+}
+#heart{
+  width: 32px;
+  height: 35px;
+  margin-left: 600px; 
+}
+
+#hr{
+  border: 2px solid #FFDE8A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-0.04deg);
+}
+
+#review{
+  font-family: 'Inter';
+  font-size: 38px;
+  margin-top: 0%;
+  margin-left: 10px;
+  color: #C19057;
+} 
+
+#review_register{
+  width: 1730px;
+  height: 50px;
+  position: fixed;
+  margin-top: 120px;
+  box-sizing: border-box;
+  background: #FFFBEC;
+  border: 2px solid #000000;
+}
+
+#register{    
+  margin-left: 1750px;
+  position: fixed;
+  margin-top: 120px;
+  width: 100px;
+  height: 50px;
+  background: rgba(255, 194, 108, 0.79);
+  border: 2px solid #000000;
+  border-radius: 30px;
+  font-family: 'Inter';
+  font-size: 18px;
+  color: #000000;
+}
+
+#date{
+
+}
+
+#nickName{
+ 
+}
+
+#content{
+  margin-top: -30px;
+  background: #FFFBEC;
+  border-radius: 30px;
+  font-family: 'Inter';
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+#nickName{
+  width: 161px;
+  height: 30px;
+  background: #FFFBEC;
+  font-family: 'Inter';
+  font-size: 15px;
+  color: #C1B6B6;
+}
+
+#passwd{
+  width: 161px;
+  height: 30px;
+  margin-top: -30px;
+  background: #FFFBEC;
+  font-family: 'Inter';
+  font-size: 15px;
+  color: #C1B6B6;
+}
