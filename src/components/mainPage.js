@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import Header from './header.js'
 import SimpleSlider from '../slider';
 import StyledSlider from '../slider';
+import ChickenCard from '../../src/chickenCard.js'
 
 function MainPage() {
 
@@ -18,8 +19,14 @@ function MainPage() {
               <option>3</option>
               <option>4</option>
             </select>
+            <div id='weeklyChickenBox'>
+              
+            </div>
+            <div id='rankingBox'>
+              
+            </div>
             <div id='mainSlider'>
-              <StyledSlider></StyledSlider>
+              <SimpleSlider></SimpleSlider>
             </div>
           </body>
           

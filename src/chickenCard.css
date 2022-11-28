@@ -1,0 +1,22 @@
+#card{
+    height:95%;
+    width:24%;
+    margin:0.5%;
+    padding:0;
+    background-color: #ffeec2;
+    display:inline-block;
+    /* border: 1px solid; */
+    border-width: 2px;
+    /* border-color: black; */
+    border-radius: 13px 13px 13px 13px / 13px 13px 13px 13px;
+}
+#cardImg{
+    height: 60%;
+    width:90%;
+    padding:0;
+    margin:0;
+    position: relative;
+    top : 5%;
+    left:5%;
+    background-color: white;
+}
