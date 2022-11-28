@@ -13,8 +13,10 @@ function App() {
     <div>
       {/* <MainPage></MainPage> */}
       {/* <UploadChicken></UploadChicken> */}
+      <Detailed></Detailed>
       {/* <Detailed></Detailed> */}
       <Search></Search>
+
     </div>
   );
 }
