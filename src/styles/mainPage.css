@@ -1,21 +1,5 @@
-.mainPage{
-    height:100vh;
-    width: 100vw;
-    overflow: hidden;
-}
-.mainPage>header{
-    height:80px;
-}
-.mainPage>body{
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #FFF5E2;
-    display: block;
-}
-#sortBy{
+/*
+.sortBy{
     font-size: 13px;
     float: right;
     position: relative;
@@ -27,63 +11,68 @@
     border: 2px solid #000000;
     cursor: pointer;
   }
-  #mainSlider{
-    display:inline-block;
-    height:220px;
-    width:80%;
-    margin:0;
-    padding:0;
-    position:absolute;
-    top: 70%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    /* border: 1px solid;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 13px 13px 13px 13px / 13px 13px 13px 13px; */
-  }
-  #chickenBox{
+ */
+
+.mainSlider {
+    height: 220px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.chicken {
+    margin-top: 5rem;
+}
+
+.chickenBox {
     height: 220px;
     width: 100%;
     background-color: #FFF5E2;
-    /* border: 1px solid; */
-    border-width: 2px;
-    /* border-color: black; */
-    border-radius: 13px 13px 13px 13px / 13px 13px 13px 13px;
     box-sizing: border-box;
-  }
-  #rankingBox{
-    display: inline-block;
-    height: 200px;
-    width:80%;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 40%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    background-color: #FFF5E2;
-    border: 1px solid;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 13px 13px 13px 13px / 13px 13px 13px 13px;
-  }
-  #weeklyChickenBox{
-    display: inline-block;
-    height: 180px;
-    width:80%;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 13%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    background-color: #FFF5E2;
-    border: 1px solid;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 13px 13px 13px 13px / 13px 13px 13px 13px;
-  }
-  #firstChicken{
-    width:30%;
-  }
+}
+
+.chickenContainer {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFFBEC;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    margin: 1rem auto;
+    padding: 1em;
+    flex-wrap: wrap;
+}
+
+.weeklyIconBox {
+    text-align: center;
+    margin: auto 5px;
+    flex: 0.2;
+}
+
+.weeklyIcon {
+    font-size: 4em;
+}
+
+.weeklyTitle{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.weeklyImageBox{
+    flex: 0.2;
+    margin: 1rem;
+}
+
+.weeklyDescBox{
+    flex: 0.6;
+    margin: 1rem;
+}
+
+.weeklyDesc {
+    font-size: 1.5em;
+}
+
+#firstChicken {
+    width: 30%;
+}
