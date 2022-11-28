@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
-import styled from 'styled-components';
+import Slider from "react-slick"; 
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-
+import ChickenCard from './chickenCard.js'
 
 export default class SimpleSlider extends Component {
   render() {
@@ -15,27 +14,36 @@ export default class SimpleSlider extends Component {
       slidesToScroll: 1,
       dots: true,
       arrows: true,
-      
+      // autoplay: true,
     };
     return (
       <div>
         <Slider {...settings}>
-          <div id='chickenBox1'>
-            <h3>1</h3>
+          <div id='chickenBox'>
+            <ChickenCard></ChickenCard>
+            <ChickenCard></ChickenCard>
+            <ChickenCard></ChickenCard>
+            <ChickenCard></ChickenCard>
           </div>
-          <div id='chickenBox2'>
-            <h3>2</h3>
+          <div id='chickenBox'>
+            <ChickenCard></ChickenCard>
+            <ChickenCard></ChickenCard>
+            <ChickenCard></ChickenCard>
+            <ChickenCard></ChickenCard>
           </div>
-          <div id='chickenBox2'>
-            <h3>3</h3>
+          <div id='chickenBox'>
+            <ChickenCard></ChickenCard>
+            <ChickenCard></ChickenCard>
+            <ChickenCard></ChickenCard>
+            <ChickenCard></ChickenCard>
           </div>
-          <div id='chickenBox2'>
+          <div id='chickenBox'>
             <h3>4</h3>
           </div>
-          <div id='chickenBox2'>
+          <div id='chickenBox'>
             <h3>5</h3>
           </div>
-          <div id='chickenBox2'>
+          <div id='chickenBox'>
             <h3>6</h3>
           </div>
         </Slider>
