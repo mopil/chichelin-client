@@ -1,66 +1,78 @@
 .header {
-    position: sticky;
-    top: 0;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #C19057;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #C19057;
+  z-index: 1;
 }
 
-.name {
-    font-family: 'Courier New', Courier, monospace;
-    color: #664730;
-    padding-left: 3rem;
+.homeButton {
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.homeButton:hover {
+  transform: scale(1.02);
+}
+
+.home {
+  font-family: 'Courier New', Courier, monospace;
+  color: #664730;
+  padding-left: 3rem;
 }
 
 .searchBar {
-    position: relative;
-    width: 30%;
-    height: 45px;
-    outline: none;
+  position: relative;
+  width: 30%;
+  height: 45px;
+  outline: none;
 }
 
 .searchInput {
-    width: 100%;
-    height: 100%;
-    font-size: 1em;
-    outline: none;
-    border: 2px solid black;
-    background-color: white;
-    box-sizing: border-box;
-    padding: 0 5px;
-    border-radius: 0.7em;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  outline: none;
+  border: 2px solid black;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0 5px;
+  border-radius: 0.7em;
 }
 
-.searchButton{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    top: 0;
-    right: 0;
-    height: 100%;
-    padding-right: 10px;
-    background-color: unset;
-    border: none;
-    cursor: pointer;
+.searchButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding-right: 10px;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
 }
 
-.searchImage{
-    width: 1.8rem;
+.searchImage {
+  width: 1.8rem;
 }
 
 .images {
-    height: 100%;
-    padding-right: 3rem;
+  height: 100%;
+  padding-right: 3rem;
 }
 
 #uploadChickenLink {
-    float: right;
-    border: none;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    padding: 0;
+  float: right;
+  border: none;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  padding: 0;
 }

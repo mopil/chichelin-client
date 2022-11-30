@@ -1,16 +1,26 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import '../styles/search.css';
-import StyledSlider from '../searchSlider';
+import axios from "axios";
+import {useLocation} from "react-router-dom";
+import StyledSlider from '../components/SearchSlider';
 
 function Search() {
-    return (
-        <div>
-            <body>
-                <div id='itemSlider'>
-                    <StyledSlider></StyledSlider>
-                </div>
-            </body>
-        </div>
-    )
+  const location = useLocation();
+  const word = new URLSearchParams(location.search).get('word');
+
+  useEffect(() => {
+    axios.get(`/chicken/search?keyword=${word}`)
+      .then(res => console.log(res.data))
+      .catch(console.log)
+  }, []);
+
+  return (
+    <main className='searchBox'>
+      <div id='itemSlider'>
+        <StyledSlider/>
+      </div>
+    </main>
+  )
 }
+
 export default Search;

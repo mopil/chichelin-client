@@ -1,16 +1,32 @@
 import '../styles/header.css';
+import {useNavigate} from "react-router-dom";
+import {useState} from "react";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const [searchWord, setSearchWord] = useState('');
+
+  const movePage = (path) => navigate(path);
+  const changeValue = (e) => setSearchWord(e.target.value);
+  const searchChicken = (e) => {
+    e.preventDefault();
+    movePage(`/search?word=${searchWord}`);
+    setSearchWord('');
+  };
+
   return (
     <header className='header'>
-      <h1 className='name'>Chichelin Guide</h1>
+      <button className='homeButton' onClick={() => movePage('/')}>
+        <h1 className='home'>Chichelin Guide</h1>
+      </button>
 
-      <label className="searchBar">
-        <input className="searchInput" type="search" placeholder="검색"/>
-        <button className='searchButton' type='button'>
+      <form className="searchBar" onSubmit={searchChicken}>
+        <input className="searchInput" name="searchWord" value={searchWord} placeholder="검색" onChange={changeValue}/>
+        <button className='searchButton' type='submit'>
           <img className='searchImage' src='/images/searchGlass.png' alt='search'/>
         </button>
-      </label>
+      </form>
 
       <div className='images'>
         <img src='/images/ChickenMan.png' width='80' height='80' alt='음...'></img>
