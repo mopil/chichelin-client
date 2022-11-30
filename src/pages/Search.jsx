@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../styles/search.css';
 import axios from "axios";
 import {useLocation} from "react-router-dom";
@@ -8,9 +8,14 @@ function Search() {
   const location = useLocation();
   const word = new URLSearchParams(location.search).get('word');
 
+  const [chicken, setChicken] = useState(initialChickenData);
+
   useEffect(() => {
     axios.get(`/chicken/search?keyword=${word}`)
-      .then(res => console.log(res.data))
+      .then(res => {
+        setChicken(res.data);
+        console.log(res.data);
+      })
       .catch(console.log)
   }, []);
 
@@ -24,3 +29,11 @@ function Search() {
 }
 
 export default Search;
+
+const initialChickenData = {
+  totalCount: 0,
+  curCount: 0,
+  totalPage: 0,
+  curPage: 0,
+  chickens: []
+}
