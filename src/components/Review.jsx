@@ -1,73 +1,92 @@
 import React, {useState} from 'react';
 import '../styles/detailed.css';
 import axios from "axios";
+import {HiOutlinePencilSquare} from "react-icons/hi2";
+import {CgClose} from "react-icons/cg"
 
 function Review({reviews, id}) {
-  const [reviewInfo, setReviewInfo] = useState({nickname: '', password: '', content: ''});
+  const [reviewInfo, setReviewInfo] = useState(initialReviewInfo);
 
   const changeValue = (e) => {
     const {name, value} = e.target;
     setReviewInfo(prev => ({...prev, [name]: value}));
   };
 
-  const postReview  = (e) => {
+  const postReview = (e) => {
     e.preventDefault();
+    if (reviewInfo.password.length !== 4) {
+      alert('비밀번호를 올바르게 입력해 주세요')
+    }
     axios.post(`/chicken/${id}/review`, reviewInfo)
-      .then(res => console.log(res.data))
+      .then(() => setReviewInfo(initialReviewInfo))
       .catch(console.log)
   };
 
-  return (
-    <section>
-      <div className='content'>
-        {reviews.map(item => (
-          <>
-            <p>{item.nickname}: {item.content}</p>
-            <p className='date'>{item.createdAt}</p>
-          </>
-        ))}
+  // 비밀번호 숫자 제한
+  const validatePassword = (e) => {
+    if (!/^[0-9]+$/.test(e.key) && e.key.length === 1) {
+      e.preventDefault();
+    }
+  };
 
-      </div>
+  return (
+    <>
+      <section>
+        {reviews.map(item => (
+          <div key={item.id} className='contentBox'>
+            <p className='content'>{item.nickname}: {item.content}</p>
+
+            <span className='contentData'>
+            <p className='content'>{item.createdAt}</p>
+            <img className='reviewHeart' src='/images/heart.png' alt='좋아요 아아콘'/>
+            <HiOutlinePencilSquare className='contentIcon'/>
+            <CgClose className='contentIcon'/>
+          </span>
+          </div>
+        ))}
+      </section>
 
       <form onSubmit={postReview}>
-        <div>
-          <label>닉네임(2-6 글자): </label>
+        <div className='writerInfoBox'>
           <input
-            className='nickName'
+            className='writerInfo'
             type='text'
             name='nickname'
             value={reviewInfo.nickname}
-            placeholder='닉네임'
+            placeholder='닉네임 (2 - 6 글자)'
             onChange={changeValue}
             required
           />
 
-          <label>비밀번호(4자리): </label>
           <input
-            className='passwd'
+            className='writerInfo'
             type='password'
             name='password'
             value={reviewInfo.password}
-            placeholder='비밀번호'
+            placeholder='비밀번호 (숫자 4자리)'
             onChange={changeValue}
+            onKeyDown={validatePassword}
+            maxLength={4}
             required
           />
         </div>
 
-        <div>
+        <div className='reviewInputBox'>
           <textarea
-            className='review_register'
+            className='reviewInput'
             name='content'
             value={reviewInfo.content}
-            placeholder='리뷰 달기'
+            placeholder='리뷰 작성하기'
             onChange={changeValue}
             required
           />
-          <button className='register' type='submit'>등록</button>
+          <button className='registerButton' type='submit'>등록</button>
         </div>
       </form>
-    </section>
+    </>
   );
 }
 
 export default Review;
+
+const initialReviewInfo = {nickname: '', password: '', content: ''};

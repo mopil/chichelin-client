@@ -56,7 +56,7 @@ function Detailed() {
             </span>
 
             <span className='likedBox'>
-              <img src='/images/heart.png' className='heart'></img>
+              <img src='/images/heart.png' className='heart' alt='좋아요 아아콘'/>
               <p className='count'>{detail.likes}</p>
             </span>
           </div>
@@ -65,7 +65,7 @@ function Detailed() {
 
       <br/>
 
-      <hr className="hr"></hr>
+      <hr className="hr"/>
 
       <p className='review'>Reviews</p>
       <Review reviews={detail.reviews} id={id}/>

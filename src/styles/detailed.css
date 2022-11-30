@@ -1,155 +1,204 @@
-body{
+.main {
   background: #FFF5E2;
-}
-.detail{
-    width: 900px;
-    height: 450px;
-    margin-left: 27%;
-    margin-top: 100px;
-    background: #FFFBEC;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
 }
 
-#rank{
-  margin-left: 15px;
-  padding-top: 10px;
-  font-family: 'Inter';
+.detail {
+  width: 900px;
+  height: 450px;
+  padding: 0.5rem;
+  margin: auto;
+  background: #FFFBEC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.detailTitle {
+  position: relative;
+}
+
+.rank {
+  width: max-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem;
   font-size: 32px;
   color: #000000;
   font-weight: bold;
-  background: #FFFBEC;
 }
 
-#chickenName{  
-  margin-left: 40%;
-  margin-top: -40px;
-  font-family: 'Inter';
+.titleBox {
+  display: flex;
+  justify-content: center;
+}
+
+.chickenName {
+  position: relative;
+  text-align: center;
   font-size: 36px;
   color: #000000;
-  background: #FFFBEC;
+  width: max-content;
+  padding: 0 2.2rem;
 }
 
-#brand{
-  margin-top: -400px;
-  margin-left: 600px;
-  font-family: 'Inter';
+.quoteIconLeft, .quoteIconRight {
+  position: absolute;
+  font-size: 0.6em;
+}
+
+.quoteIconLeft {
+  top: 0;
+  left: 0;
+}
+
+.quoteIconRight {
+  right: 0;
+  bottom: 0;
+}
+
+.detailData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chickenImageBox {
+  flex: 0.6;
+}
+
+.chickenImage {
+  width: 90%;
+}
+
+.chickenData {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand, .price {
   font-size: 32px;
-  line-height: 39px;
-  /* identical to box height */
-
   color: #000000;
-  background: #FFFBEC;
+  margin: 0;
 }
 
-#price{
-  margin-top: -20px;
-  margin-left: 600px;
-  padding-bottom: 0%;
-  font-family: 'Inter';
-  font-size: 32px;
+.spicyLevelBox{
+  display: flex;
+  align-items: center;
+}
+
+.likedBox {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  width: 2rem;
+}
+
+.count {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
   color: #000000;
-  background: #FFFBEC;
 }
 
-#count{
-  margin-left: 650px;
-  margin-top: -32px;
-  font-family: 'Inter';
-  font-size: 16px;
-  color: #000000;
-  background: #FFFBEC;
-}
-
-#spicyBasasack{
-  width: 550px;
-  height: 520px; 
-  margin-left: 30px;
-  margin-top: -115px;
-}
-#spicy{
-  width: 32px;
-  height: 35px;
-  margin-left: 600px;
-  margin-top: -300px;
-}
-#heart{
-  width: 32px;
-  height: 35px;
-  margin-left: 600px; 
-}
-
-#hr{
+.hr {
   border: 2px solid #FFDE8A;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transform: rotate(-0.04deg);
 }
 
-#review{
-  font-family: 'Inter';
+.review {
   font-size: 38px;
-  margin-top: 0%;
+  margin-top: 0;
   margin-left: 10px;
   color: #C19057;
-} 
-
-#review_register{
-  width: 1730px;
-  height: 50px;
-  position: fixed;
-  margin-top: 120px;
-  box-sizing: border-box;
-  background: #FFFBEC;
-  border: 2px solid #000000;
 }
 
-#register{    
-  margin-left: 1750px;
-  position: fixed;
-  margin-top: 120px;
-  width: 100px;
+.writerInfoBox{
+  margin: 1rem 1rem 0;
+}
+
+.writerInfo {
+  width: 12rem;
+  height: 2.5rem;
+  background-color: #FFFBEC;
+  font-size: 15px;
+  color: #C1B6B6;
+  border-radius: 0.5em;
+  border: none;
+  margin-right: 1em;
+  padding-left: 8px;
+  box-shadow: 1px 1px 1px 0 darkgray;
+}
+
+.writerInfo:focus {
+  outline: none;
+}
+
+.reviewInputBox{
+  display: flex;
+  align-items: center;
+}
+
+.reviewInput {
+  flex: 0.95;
   height: 50px;
-  background: rgba(255, 194, 108, 0.79);
+  margin: 1em;
+  padding: 10px;
+  background-color: #FFFBEC;
+  border: 2px solid #000000;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+}
+
+.registerButton {
+  flex: 0.05;
+  height: 50px;
+  margin: 1em;
+  background-color: rgba(255, 194, 108, 0.79);
   border: 2px solid #000000;
   border-radius: 30px;
-  font-family: 'Inter';
   font-size: 18px;
   color: #000000;
+  cursor: pointer;
 }
 
-#date{
-
+.registerButton:hover {
+  background-color: rgba(255, 215, 158, 0.86);
 }
 
-#nickName{
- 
-}
-
-#content{
-  margin-top: -30px;
+.contentBox {
   background: #FFFBEC;
-  border-radius: 30px;
-  font-family: 'Inter';
+  border-radius: 1.8rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
   font-size: 15px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   color: #000000;
 }
 
-#nickName{
-  width: 161px;
-  height: 30px;
-  background: #FFFBEC;
-  font-family: 'Inter';
-  font-size: 15px;
-  color: #C1B6B6;
+.content {
+  font-size: 1.1em;
 }
 
-#passwd{
-  width: 161px;
-  height: 30px;
-  margin-top: -30px;
-  background: #FFFBEC;
-  font-family: 'Inter';
-  font-size: 15px;
-  color: #C1B6B6;
+.contentData {
+  width: 15%;
+  min-width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contentIcon{
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+.reviewHeart {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
 }
