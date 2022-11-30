@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import MainPage from './pages/mainPage';
-import UploadChicken from './pages/uploadChicken';
-import Detailed from './pages/detailed';
-import Search from './pages/search';
-import NotFound from "./pages/notFound";
-import Root from "./pages/root";
+import MainPage from './pages/MainPage';
+import UploadChicken from './pages/UploadChicken';
+import Detailed from './pages/Detailed';
+import Search from './pages/Search';
+import NotFound from "./pages/NotFound";
+import Root from "./pages/Root";
 
 const router = createBrowserRouter([
   {

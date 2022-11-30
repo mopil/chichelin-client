@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import ChickenCard from './chickenCard.jsx'
+import ChickenCard from './ChickenCard.jsx'
 
 export default class SimpleSlider extends Component {
   render() {
