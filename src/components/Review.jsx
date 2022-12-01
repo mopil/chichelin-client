@@ -22,6 +22,12 @@ function Review({reviews, id}) {
       .catch(console.log)
   };
 
+  const postLikeReview = (chickenId, reviewId) => {
+    axios.post(`/chicken/${chickenId}/review/${reviewId}/like`)
+      .then(res => console.log(res.data))
+      .catch(console.log)
+  };
+
   // 비밀번호 숫자 제한
   const validatePassword = (e) => {
     if (!/^[0-9]+$/.test(e.key) && e.key.length === 1) {
@@ -29,49 +35,48 @@ function Review({reviews, id}) {
     }
   };
 
-  return (
-    <>
-      <section>
-        {reviews.map(item => (
-          <div key={item.id} className='contentBox'>
-            <p className='content'>{item.nickname}: {item.content}</p>
+  return (<>
+    <section>
+      {reviews.map(item => (<div key={item.id} className='contentBox'>
+        <p className='content'>{item.nickname}: {item.content}</p>
 
-            <span className='contentData'>
-            <p className='content'>{item.createdAt}</p>
+        <span className='contentData'>
+          <p className='content'>{item.createdAt}</p>
+          <span onClick={() => postLikeReview(id, item.id)}>
             <img className='reviewHeart' src='/images/heart.png' alt='좋아요 아아콘'/>
-            <HiOutlinePencilSquare className='contentIcon'/>
-            <CgClose className='contentIcon'/>
           </span>
-          </div>
-        ))}
-      </section>
+          <HiOutlinePencilSquare className='contentIcon'/>
+          <CgClose className='contentIcon'/>
+        </span>
+      </div>))}
+    </section>
 
-      <form onSubmit={postReview}>
-        <div className='writerInfoBox'>
-          <input
-            className='writerInfo'
-            type='text'
-            name='nickname'
-            value={reviewInfo.nickname}
-            placeholder='닉네임 (2 - 6 글자)'
-            onChange={changeValue}
-            required
-          />
+    <form onSubmit={postReview}>
+      <div className='writerInfoBox'>
+        <input
+          className='writerInfo'
+          type='text'
+          name='nickname'
+          value={reviewInfo.nickname}
+          placeholder='닉네임 (2 - 6 글자)'
+          onChange={changeValue}
+          required
+        />
 
-          <input
-            className='writerInfo'
-            type='password'
-            name='password'
-            value={reviewInfo.password}
-            placeholder='비밀번호 (숫자 4자리)'
-            onChange={changeValue}
-            onKeyDown={validatePassword}
-            maxLength={4}
-            required
-          />
-        </div>
+        <input
+          className='writerInfo'
+          type='password'
+          name='password'
+          value={reviewInfo.password}
+          placeholder='비밀번호 (숫자 4자리)'
+          onChange={changeValue}
+          onKeyDown={validatePassword}
+          maxLength={4}
+          required
+        />
+      </div>
 
-        <div className='reviewInputBox'>
+      <div className='reviewInputBox'>
           <textarea
             className='reviewInput'
             name='content'
@@ -80,11 +85,10 @@ function Review({reviews, id}) {
             onChange={changeValue}
             required
           />
-          <button className='registerButton' type='submit'>등록</button>
-        </div>
-      </form>
-    </>
-  );
+        <button className='registerButton' type='submit'>등록</button>
+      </div>
+    </form>
+  </>);
 }
 
 export default Review;
