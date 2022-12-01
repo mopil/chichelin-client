@@ -2,11 +2,14 @@ import React, {useEffect, useState} from 'react';
 import '../styles/mainPage.css'
 import axios from "axios";
 import baseUrl from "../api/api";
-import SimpleSlider from '../slider';
 import {AiTwotoneLike} from "react-icons/ai";
-import ChickenCard from "../components/chickenCard";
+import ChickenCard from "../components/ChickenCard";
+import SimpleSlider from '../components/Slider';
+import {useNavigate} from "react-router-dom";
 
 function MainPage() {
+  const navigate = useNavigate();
+
   const [recommend, setRecommend] = useState(initialRecommendChicken);
   const [ranking, setRanking] = useState([]);
   const [chicken, setChicken] = useState(initialChicken);
@@ -19,16 +22,17 @@ function MainPage() {
       .catch(console.log)
 
     axios.get(`/chicken/ranking`)
-      .then(res => {
-        setRanking(res.data.ranking)
-        console.log(res.data.ranking)
-      })
+      .then(res => setRanking(res.data.ranking))
       .catch(console.log)
 
     axios.get(`/chicken/list?page=0`)
       .then(res => setChicken(res.data))
       .catch(console.log)
   }, []);
+
+  const openDetail = (chickenId) => {
+    navigate(`/detail?id=${chickenId}`);
+  };
 
   return (
     <main className='mainPage'>
@@ -54,13 +58,14 @@ function MainPage() {
           </div>
 
           <div className='weeklyDescBox'>
-            <h2>{recommend.name}</h2>
-            <p className='weeklyDesc'>오늘은 {WEEKDAY[today.getDay()]}요일! 스트레스를 사악 날릴 {recommend.name} 어떠신가요~~~!!</p>
+            <h2 className='weeklyChickenName'>{recommend.name}</h2>
+            <p className='weeklyDesc'>오늘은 {WEEKDAY[today.getDay()]}요일!</p>
+            <p className='weeklyDesc'>스트레스를 사악 날릴 {recommend.name} 어떠신가요~~~!!</p>
           </div>
         </section>
 
         <section className='chickenContainer'>
-          {ranking.map(item => <ChickenCard key={item.id} chicken={item}/>)}
+          {ranking.map(item => <ChickenCard key={item.id} chicken={item} onClick={openDetail}/>)}
         </section>
       </section>
 
