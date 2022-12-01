@@ -1,3 +1,5 @@
+/* Header */
+
 .header {
   position: sticky;
   top: 0;
@@ -63,9 +65,32 @@
   width: 1.8rem;
 }
 
-.images {
+.chickenUploadButton {
   height: 100%;
   padding-right: 3rem;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  transition: all 0.5s;
+}
+
+.chickenUploadButton:hover {
+  transform: scale(1.02);
+}
+
+.speechBubble {
+  position: relative;
+  height: 100%;
+}
+
+.buttonContent {
+  position: absolute;
+  top: 0.4em;
+  left: 0.7em;
+  color: #664730;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 #uploadChickenLink {
@@ -75,4 +100,59 @@
   height: 80px;
   cursor: pointer;
   padding: 0;
+}
+
+/* Chicken Card */
+
+.cardContainer {
+  width: 20%;
+  padding: 1em;
+  background-color: #ffeec2;
+  box-sizing: border-box;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.cardContainer:hover {
+  transform: scale(1.02);
+  box-shadow: 3px 1px 5px 2px lightgrey;
+}
+
+.cardImg {
+  width: 100%;
+}
+
+.chickenInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.chickenInfoDetail {
+  margin: 0;
+  font-weight: bold;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+}
+
+.likedButton {
+  background-color: unset;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.likedIcon {
+  font-size: large;
+  margin-right: 5px;
+  color: orangered;
+  height: 100%;
 }
