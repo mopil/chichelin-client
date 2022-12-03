@@ -26,6 +26,26 @@
   transition: 0.5s;
 }
 
+.sliderButton.spicy0 {
+  background-color: #ffeec2;
+}
+
+.sliderButton.spicy1 {
+  background-color: #FFDEB8;
+}
+
+.sliderButton.spicy2 {
+  background-color: #FCAB7D;
+}
+
+.sliderButton.spicy3 {
+  background-color: #F39E7A;
+}
+
+.sliderButton.spicy4 {
+  background-color: #FC8A4A;
+}
+
 .sliderButton:hover {
   transform: scale(1.02);
   box-shadow: 3px 1px 5px 2px lightgrey;
