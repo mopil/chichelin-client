@@ -102,6 +102,34 @@
   padding: 0;
 }
 
+/* Footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 0 2em;
+  background-color: #C19057;
+}
+
+.footerTitle {
+  margin-right: 1em;
+  color: #ffeec2;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.members {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.member {
+  margin-right: 1em;
+  color: #ffeec2;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 /* Chicken Card */
 
 .cardContainer {
