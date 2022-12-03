@@ -236,6 +236,7 @@
   background-color: #fff9e9;
   width: 25vw;
   height: 25vh;
+  min-height: 250px;
   padding: 1em;
   display: flex;
   flex-direction: column;

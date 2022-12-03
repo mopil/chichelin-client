@@ -8,8 +8,9 @@ function Review({reviews, setDetail, id}) {
   const [reviewInfo, setReviewInfo] = useState(initialReviewInfo);
   const [curReview, setCurReview] = useState({chickenId: 0, reviewId: 0});
   const [modifyReviewData, setModifyReviewData] = useState({nickname: '', password: '', content: ''});
-  const [open, setOpen] = useState(false);
+  const [deleteReviewData, setDeleteReviewData] = useState({nickname: '', password: '', content: ''});
   const [buttonName, setButtonName] = useState('등록');
+  const [open, setOpen] = useState(false);
 
   const changeValue = (e) => {
     const {name, value} = e.target;
@@ -49,6 +50,12 @@ function Review({reviews, setDetail, id}) {
     setButtonName('수정');
   };
 
+  /* 리뷰 수정 취소 */
+  const cancelModifyReview = () => {
+    setButtonName('등록');
+    setReviewInfo(initialReviewInfo);
+  };
+
   /* 리뷰 수정 요청 함수 */
   const putReview = (e) => {
     e.preventDefault();
@@ -65,15 +72,13 @@ function Review({reviews, setDetail, id}) {
   const openDelete = (chickenId, reviewId, review) => {
     setOpen(true);
     setCurReview({chickenId, reviewId});
-    setReviewInfo({nickname: review.nickname, password: review.password, content: review.content});
+    setDeleteReviewData({nickname: review.nickname, password: review.password, content: review.content});
   };
 
   /* 리뷰 삭제 함수 */
   const deleteReview = (e) => {
     e.preventDefault();
-    axios.delete(`/chicken/${curReview.chickenId}/review/${curReview.reviewId}`, {
-      body: reviewInfo
-    })
+    axios.delete(`/chicken/${curReview.chickenId}/review/${curReview.reviewId}`, {data: deleteReviewData})
       .then(res => {
         alert('삭제되었습니다.');
         setOpen(prev => !prev);
@@ -147,6 +152,9 @@ function Review({reviews, setDetail, id}) {
           required
         />
           <button className='registerButton' type='submit'>{buttonName}</button>
+          {buttonName === '수정' &&
+            <button className='registerButton' type='button' onClick={cancelModifyReview}>취소</button>
+          }
         </div>
       </form>
 
