@@ -1,4 +1,4 @@
-import '../styles/chickenCard.css'
+import '../styles/style.css'
 import baseUrl from "../api/api";
 import {BsFillSuitHeartFill} from "react-icons/bs";
 

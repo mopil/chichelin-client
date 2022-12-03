@@ -22,7 +22,14 @@ function Header() {
       </button>
 
       <form className="searchBar" onSubmit={searchChicken}>
-        <input className="searchInput" name="searchWord" value={searchWord} placeholder="검색" onChange={changeValue}/>
+        <input
+          className="searchInput"
+          name="searchWord"
+          value={searchWord}
+          placeholder="검색"
+          required
+          autoComplete='off'
+          onChange={changeValue}/>
         <button className='searchButton' type='submit'>
           <img className='searchImage' src='/images/searchGlass.png' alt='search'/>
         </button>

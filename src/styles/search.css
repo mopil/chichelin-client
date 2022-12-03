@@ -1,107 +1,51 @@
-.searchBox{
-    background: #FFF5E2;
-    height: 100vh;
+.searchBox {
+  background: #FFF5E2;
+  min-height: 100vh;
+  padding: 2rem;
 }
-/*
-.itemSlider{
-    display:inline-block;
-    height:450px;
-    width:70%;
-    transform: translate(-50%,-50%);
-}
-*/
 
-.slide1{
-    margin-top: 180px;
-    height:700px;
-    width: 70%;
+.itemSlider {
+  max-width: 70vw;
+  margin: auto;
 }
-.itembox1{
-    height: 320px;
-    width: 300px;
-    margin-left: 200px;
-    background: #FFEEC2;
-    display: inline-block;
-    border-radius: 10%;
+
+.slider {
+  max-width: 70vw;
+  margin: 0 auto;
 }
-.itembox2{
-    height: 320px;
-    width: 300px;
-    margin-left: 100px;
-    background: #FFDEB8;
-    display: inline-block;
-    border-radius: 10%;
+
+.sliderButton {
+  padding: 1.5em;
+  margin: 1em;
+  background-color: #FFEEC2;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
 }
-.itembox3{
-    height: 320px;
-    width: 300px;
-    margin-left: 100px;
-    display: inline-block;
-    background: #FFEEC2;
-    border-radius: 10%;
+
+.sliderButton:hover {
+  transform: scale(1.02);
+  box-shadow: 3px 1px 5px 2px lightgrey;
 }
-.itembox4{
-    height: 320px;
-    width: 300px;
-    margin-left: 100px;
-    display: inline-block;
-    background: #FFEEC2;
-    border-radius: 10%;
+
+.imgBox {
+  width: 250px;
+  height: 150px;
+  margin: auto;
 }
-.itembox5{
-    height: 320px;
-    width: 300px;
-    margin-left: 200px;
-    margin-top: 50px;
-    background-color: rgb(255, 226, 188);
-    display: inline-block;
-    border-radius: 10%;
+
+.infoBox {
+  width: 250px;
+  height: 110px;
+  border: 1px dashed;
+  margin: 20px auto 0;
 }
-.itembox6{
-    height: 320px;
-    width: 300px;
-    margin-left: 100px;
-    background: rgba(243, 158, 122, 0.52);
-    display: inline-block;
-    border-radius: 10%;
-}
-.itembox7{
-    height: 320px;
-    width: 300px;
-    margin-left: 100px;
-    display: inline-block;
-    background: rgba(243, 158, 122, 0.52);
-    border-radius: 10%;
-}
-.itembox8{
-    height: 320px;
-    width: 300px;
-    margin-left: 100px;
-    display: inline-block;
-    background: #FC8A4A;
-    border-radius: 10%;
-}
-.imgBox{
-    background: white;
-    width: 250px;
-    height: 150px;
-    margin: auto;
-    margin-top: 20px;
-}
-.infoBox{
-    width: 250px;
-    height: 110px;
-    border: 1px dashed;
-    margin: auto;
-    margin-top: 20px;
-}
-.contentLeft{
-    display: inline-block;
-}
-.contentRight{
-    display: inline-block;
-}
-.ulStyle{
-    list-style: none;
-    font-size: 18px;
+
+.sliderInfo {
+  list-style: none;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
 }
