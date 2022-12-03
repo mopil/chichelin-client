@@ -4,13 +4,13 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import SliderCard from "./SliderCard";
 
-function SearchSlider({chickens}) {
+function ChickenSlider({chickens, row, dots, showLength}) {
   const settings = {
-    rows: 2,
-    slidesToShow: 4,
+    rows: row,
+    slidesToShow: showLength,
     slidesToScroll: 4,
     arrows: true,
-    dots: true,
+    dots: dots,
     infinite: true,
     speed: 800
   };
@@ -22,4 +22,4 @@ function SearchSlider({chickens}) {
   );
 }
 
-export default SearchSlider;
+export default ChickenSlider;

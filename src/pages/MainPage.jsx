@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import '../styles/mainPage.css'
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 import baseUrl from "../api/api";
 import {AiTwotoneLike} from "react-icons/ai";
 import ChickenCard from "../components/ChickenCard";
-import SimpleSlider from '../components/Slider';
-import {useNavigate} from "react-router-dom";
+import ChickenSlider from "../components/ChickenSlider";
 
 function MainPage() {
   const navigate = useNavigate();
 
   const [recommend, setRecommend] = useState(initialRecommendChicken);
   const [ranking, setRanking] = useState([]);
-  const [chicken, setChicken] = useState(initialChicken);
+  const [chicken, setChicken] = useState([]);
   let today = new Date();
   const WEEKDAY = ['일', '월', '화', '수', '목', '금', '토'];
 
@@ -26,7 +26,7 @@ function MainPage() {
       .catch(console.log)
 
     axios.get(`/chicken/list?page=0`)
-      .then(res => setChicken(res.data))
+      .then(res => setChicken(res.data.chickens))
       .catch(console.log)
   }, []);
 
@@ -35,19 +35,9 @@ function MainPage() {
   };
 
   return (
-    <main className='mainPage'>
-      {/*
-      <select className='sortBy'>
-        <option>정렬 조건 선택</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-      </select>
-      */}
-
+    <>
       <section className='chicken'>
-        <section className='chickenContainer'>
+        <section className='chickenContainer weekly' onClick={()=>openDetail(recommend.id)}>
           <div className='weeklyIconBox'>
             <AiTwotoneLike className='weeklyIcon'/>
             <p className='weeklyTitle'>금주의 치킨</p>
@@ -70,10 +60,9 @@ function MainPage() {
       </section>
 
       <section className='mainSlider'>
-        <SimpleSlider/>
+        <ChickenSlider chickens={chicken} row={1} showLength={4} dots={false}/>
       </section>
-
-    </main>
+    </>
   );
 }
 
@@ -88,12 +77,4 @@ const initialRecommendChicken = {
   brand: '',
   likes: 0,
   reviews: []
-}
-
-const initialChicken = {
-  totalCount: 0,
-  curCount: 0,
-  totalPage: 0,
-  curPage: 0,
-  chickens: []
 }

@@ -52,13 +52,13 @@ function UploadChicken() {
       <form className='chickenUploadForm' onSubmit={postChicken}>
         <section className='uploadDetailInfoBox'>
           <input type='text' className='detailInput' placeholder='치킨 이름' value={chickenData.chickenName} name='chickenName'
-                 onChange={changeValue}/>
+                 onChange={changeValue} required autoComplete='off'/>
           <input type='text' className='detailInput' placeholder='가격' value={chickenData.price} name='price'
-                 onChange={changeValue}/>
+                 onChange={changeValue} required autoComplete='off'/>
 
           <select className='detailSelect' value={chickenData.brand} name='brand' onChange={changeValue}>
             <option value=''>가게 이름</option>
-            {store.map(item => (
+            {brandList.map(item => (
               <option key={item} value={item}>{item}</option>
             ))}
           </select>
@@ -90,7 +90,7 @@ function UploadChicken() {
 
 export default UploadChicken;
 
-const store = ['굽네', '교촌', 'BBQ', 'BHC', '푸라닭', '60계', '네네치킨', '호식이', '두마리', '노랑통닭', '처갓집'];
+const brandList = ['굽네', '교촌', 'BBQ', 'BHC', '푸라닭', '60계', '네네치킨', '호식이', '두마리', '노랑통닭', '처갓집'];
 const spicyLevel = [{id: 0, level: '0단계'}, {id: 1, level: '1단계'}, {id: 2, level: '2단계'}, {id: 3, level: '3단계'}, {
   id: 4,
   level: '4단계'

@@ -14,70 +14,79 @@
  */
 
 .mainSlider {
-    height: 220px;
-    width: 80%;
-    margin: 0 auto;
-    padding: 0;
+  width: 70%;
+  margin: 0 auto 5rem;
+  padding: 0;
 }
 
 .chicken {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 
 .chickenBox {
-    height: 220px;
-    width: 100%;
-    background-color: #FFF5E2;
-    box-sizing: border-box;
+  height: 220px;
+  width: 100%;
+  background-color: #FFF5E2;
+  box-sizing: border-box;
 }
 
 .chickenContainer {
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #FFFBEC;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
-    margin: 1rem auto;
-    padding: 1em;
-    flex-wrap: wrap;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFFBEC;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  margin: 1rem auto;
+  padding: 1em;
+  flex-wrap: wrap;
+}
+
+.chickenContainer.weekly {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.chickenContainer.weekly:hover {
+  transform: scale(1.02);
+  box-shadow: 1px 1px 3px 1px darkgrey;
 }
 
 .weeklyIconBox {
-    text-align: center;
-    margin: auto 5px;
-    flex: 0.2;
+  text-align: center;
+  margin: auto 5px;
+  flex: 0.2;
 }
 
 .weeklyIcon {
-    font-size: 4em;
+  font-size: 4em;
 }
 
-.weeklyTitle{
-    font-size: 1.2em;
-    font-weight: bold;
+.weeklyTitle {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
-.weeklyImageBox{
-    flex: 0.2;
-    margin: 1rem;
+.weeklyImageBox {
+  flex: 0.2;
+  margin: 1rem;
 }
 
-.weeklyDescBox{
-    flex: 0.6;
-    margin: 1rem;
+.weeklyDescBox {
+  flex: 0.6;
+  margin: 1rem;
 }
 
-.weeklyChickenName{
-    margin-top: 0;
+.weeklyChickenName {
+  margin-top: 0;
 }
 
 .weeklyDesc {
-    font-size: 1.5em;
-    margin: 0;
+  font-size: 1.5em;
+  margin: 0;
 }
 
 #firstChicken {
-    width: 30%;
+  width: 30%;
 }

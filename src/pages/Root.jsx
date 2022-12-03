@@ -5,8 +5,7 @@ import Footer from "../components/Footer";
 
 function Root(props) {
   return (
-    <div style={{ backgroundColor: '#FFF5E2', minHeight: '100vh', display: 'flex',
-      flexDirection: 'column', justifyContent: 'space-between' }}>
+    <div className='container'>
       <Header/>
       <Outlet/>
       <Footer/>

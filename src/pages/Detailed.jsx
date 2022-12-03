@@ -14,10 +14,7 @@ function Detailed() {
 
   useEffect(() => {
     axios.get(`/chicken/${id}`)
-      .then(res => {
-        setDetail(res.data)
-        console.log(res.data)
-      })
+      .then(res => setDetail(res.data))
       .catch(console.error)
   }, []);
 
@@ -27,10 +24,20 @@ function Detailed() {
     return level;
   };
 
+  /* 치킨 좋아요 등록 함수 */
+  const postLikeChicken= () => {
+    axios.put(`/chicken/${id}/like`)
+      .then(res => {
+        setDetail(res.data);
+        alert('좋아요가 등록되었습니다.');
+      })
+      .catch(console.log)
+  };
+
   return (
     <main className='main'>
       <section className='detail'>
-        <section className='detailTitle'>
+        <section>
           <p className='rank'>3위</p>
 
           <div className='titleBox'>
@@ -49,13 +56,13 @@ function Detailed() {
 
           <div className='chickenData'>
             <p className='brand'>{detail.brand}</p>
-            <p className='price'>{detail.price}</p>
+            <p className='price'>{detail.price}원</p>
 
             <span className='spicyLevelBox'>
-              {spicyLevel().map(_ => <img src='/images/spicy.png' alt='spicy' style={{width: '2.5rem'}}/>)}
+              {spicyLevel().map(_ => <img src='/images/spicy.png' alt='spicy' style={{width: '2.3rem'}}/>)}
             </span>
 
-            <span className='likedBox'>
+            <span className='likedBox' onClick={postLikeChicken}>
               <img src='/images/heart.png' className='heart' alt='좋아요 아아콘'/>
               <p className='count'>{detail.likes}</p>
             </span>
@@ -68,7 +75,7 @@ function Detailed() {
       <hr className="hr"/>
 
       <p className='review'>Reviews</p>
-      <Review reviews={detail.reviews} id={id}/>
+      <Review reviews={detail.reviews} setDetail={setDetail} id={id}/>
     </main>
   );
 }
