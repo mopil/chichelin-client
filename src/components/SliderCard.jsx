@@ -13,8 +13,7 @@ function SliderCard({chicken}) {
   return (
     <button className='sliderButton' onClick={() => openDetail(chicken.id)}>
       <div className='imgBox'>
-        <img src={`${baseUrl}/chicken/image/${chicken.imageServerFilename}`} alt={chicken.name} width='100%'
-             height='100%'/>
+        <img src={`${baseUrl}/chicken/image/${chicken.imageServerFilename}`} alt={chicken.name} width='100%' height='100%'/>
       </div>
 
       <div className='infoBox'>
