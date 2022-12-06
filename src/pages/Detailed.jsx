@@ -38,8 +38,6 @@ function Detailed() {
     <main className='main'>
       <section className='detail'>
         <section>
-          <p className='rank'>3위</p>
-
           <div className='titleBox'>
             <p className='chickenName'>
               <FaQuoteLeft className='quoteIconLeft'/>
