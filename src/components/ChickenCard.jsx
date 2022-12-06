@@ -7,7 +7,9 @@ function ChickenCard(props) {
 
   return (
     <main className={`cardContainer spicy${spicy}`} onClick={() => props.onClick(id)}>
-      <img className='cardImg' src={`${baseUrl}/chicken/image/${imageServerFilename}`} alt='치킨사진'/>
+      <div className='cardImgBox'>
+        <img className='cardImg' src={`${baseUrl}/chicken/image/${imageServerFilename}`} alt='치킨사진' style={{objectFit: 'contain'}}/>
+      </div>
 
       <section className='chickenInfo'>
         <p className='chickenInfoDetail'>{name}</p>
