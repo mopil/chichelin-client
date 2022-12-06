@@ -72,3 +72,13 @@
   justify-content: space-around;
   padding: 0;
 }
+
+.slick-arrow.slick-prev::before,
+.slick-arrow.slick-next::before {
+  color: #664730;
+  font-size: 30px;
+}
+
+.slick-slider{
+  text-align: center;
+}
