@@ -147,7 +147,6 @@
   width: 25%;
   min-width: 200px;
   padding: 1em;
-  background-color: #ffeec2;
   box-sizing: border-box;
   border-radius: 13px;
   display: flex;
@@ -156,6 +155,26 @@
   align-items: center;
   cursor: pointer;
   transition: 0.5s;
+}
+
+.cardContainer.spicy0 {
+  background-color: #ffeec2;
+}
+
+.cardContainer.spicy1 {
+  background-color: #FFDEB8;
+}
+
+.cardContainer.spicy2 {
+  background-color: #FCAB7D;
+}
+
+.cardContainer.spicy3 {
+  background-color: #F39E7A;
+}
+
+.cardContainer.spicy4 {
+  background-color: #FC8A4A;
 }
 
 .cardContainer:hover {

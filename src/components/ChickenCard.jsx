@@ -6,7 +6,7 @@ function ChickenCard(props) {
   const {id, name, imageServerFilename, price, spicy, brand, likes} = props.chicken;
 
   return (
-    <main className='cardContainer' onClick={() => props.onClick(id)}>
+    <main className={`cardContainer spicy${spicy}`} onClick={() => props.onClick(id)}>
       <img className='cardImg' src={`${baseUrl}/chicken/image/${imageServerFilename}`} alt='치킨사진'/>
 
       <section className='chickenInfo'>

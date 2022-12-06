@@ -57,7 +57,7 @@ function Detailed() {
             <p className='price'>{detail.price}원</p>
 
             <span className='spicyLevelBox'>
-              {spicyLevel().map(_ => <img src='/images/spicy.png' alt='spicy' style={{width: '2.3rem'}}/>)}
+              {spicyLevel().map((_, index) => <img src='/images/spicy.png' key={index} alt='spicy' style={{width: '2.3rem'}}/>)}
             </span>
 
             <span className='likedBox' onClick={postLikeChicken}>

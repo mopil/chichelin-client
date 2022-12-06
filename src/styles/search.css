@@ -14,6 +14,10 @@
 }
 
 .sliderButton {
+  min-width: 200px;
+  max-width: 270px;
+  width: 80%;
+  height: 17rem;
   padding: 1.5em;
   margin: 1em;
   background-color: #FFEEC2;
@@ -23,27 +27,47 @@
   transition: 0.5s;
 }
 
+.sliderButton.spicy0 {
+  background-color: #ffeec2;
+}
+
+.sliderButton.spicy1 {
+  background-color: #FFDEB8;
+}
+
+.sliderButton.spicy2 {
+  background-color: #FCAB7D;
+}
+
+.sliderButton.spicy3 {
+  background-color: #F39E7A;
+}
+
+.sliderButton.spicy4 {
+  background-color: #FC8A4A;
+}
+
 .sliderButton:hover {
   transform: scale(1.02);
   box-shadow: 3px 1px 5px 2px lightgrey;
 }
 
 .imgBox {
-  width: 250px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
+  max-height: 130px;
   margin: auto;
 }
 
 .infoBox {
-  width: 250px;
-  height: 110px;
-  border: 1px dashed;
-  margin: 20px auto 0;
+  width: 100%;
+  border: 1px dashed black;
+  margin: 1em auto 0;
 }
 
 .sliderInfo {
   list-style: none;
-  font-size: 18px;
+  font-size: 15px;
   display: flex;
   justify-content: space-around;
   padding: 0;
